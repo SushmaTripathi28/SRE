@@ -15,7 +15,7 @@ resource "google_monitoring_notification_channel" "email" {
 
 resource "google_monitoring_alert_policy" "cpu_alert_policy" {
   display_name = "CPU Utilization > 50%"
-  
+  combiner = "OR"
   conditions {
     display_name = "Condition 1"
     
