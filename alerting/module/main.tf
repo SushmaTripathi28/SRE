@@ -22,7 +22,7 @@ resource "google_monitoring_alert_policy" "cpu_alert_policy" {
     condition_threshold {
       comparison       = "COMPARISON_GT"
       duration         = "60s"
-      filter           = 'resource.type = "gce_instance" AND metric.type = "compute.googleapis.com/instance/cpu/utilization"'
+      filter           = resource.type = "gce_instance" AND metric.type = "compute.googleapis.com/instance/cpu/utilization"
       threshold_value  = "0.5"
       
       trigger {
