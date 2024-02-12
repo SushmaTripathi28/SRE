@@ -6,6 +6,6 @@ zone= "us-central1-a"
 }
 
 module "alerting" {
-  source       = "./modules/alerting_module"  # Update the path to your module
+  source       = "./main.tf"  # Update the path to your module
   email_address = "sushma.tripathi@hcl.com"  # Update with your email address
 }
