@@ -30,3 +30,11 @@ resource "google_monitoring_alert_policy" "alert_policy" {
     severity = "warning"
   }
 }
+resource "google_monitoring_notification_channel" "email" {
+  display_name = "Test Notification Channel"
+  type         = "email"
+  labels = {
+    email_address = "sushma.tripathi@hcl.com"
+  }
+  force_delete = true
+}
